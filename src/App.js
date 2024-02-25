@@ -1,25 +1,202 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import {nanoid} from 'nanoid'
+import Personal from "./pages/Personal";
+import Work from "./pages/Work";
+import WorkUpdate from "./pages/WorkUpdate";
+import Gratitude from "./pages/Gratitude";
+import Grateful from "./pages/Grateful";
+import School from "./pages/School";
+import Schooltasks from "./pages/Schooltasks";
+import Categories from "./pages/Categories";
+import Landing from "./pages/landing";
+import PersonalNoteContainer from "./pages/Personal2";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const ddate = new Date()
+   const colors = ["#F3DBCF", "#E5CICD", "#C9BBC8", "#B6B4C2", "#AAC9CE" ]
+   const colorsRandom = Math.floor(Math.random() * colors.length)
+   const color =  colors[colorsRandom]
+
+
+
+// --------------------------------For personal Notes-----------------------------------------------
+const personalNotes = localStorage.getItem('notesdata')
+? JSON.parse(localStorage.getItem('notesdata')) : [];
+
+   const [notes, setNotes]= useState(personalNotes)
+
+   // ---------------------------to save personal to local storage--------
+useEffect(() => {
+   localStorage.setItem("notesdata", JSON.stringify(notes))
+ }, [notes])
+
+
+
+//  -----------------------------for work notes -------------------------------------------------
+const workNotes = localStorage.getItem('workData')
+? JSON.parse(localStorage.getItem('workData')) : [];
+
+   const [workNote, setWorknotes]= useState(workNotes)
+
+   // --------------------------to save worknotes to local storage---------------
+   useEffect(() => {
+      localStorage.setItem("workData", JSON.stringify(workNote))
+    }, [workNote])
+   
+
+
+
+   //  -------------------------------------for gratitude notes-------------------------------------------
+   const gratitudeNotes = localStorage.getItem('gratitudeData')
+   ? JSON.parse(localStorage.getItem('gratitudeData')) : [];
+
+   const [gratitudeNote, setGratitudenotes]= useState(gratitudeNotes)
+   
+   // ------------------------to save gratitude notes to local storage-----
+
+   useEffect(() => {
+      localStorage.setItem("gratitudeData", JSON.stringify(gratitudeNote))
+    }, [gratitudeNote])
+   
+
+
+// -----------------------------school notes-------------------------------------------
+
+const schoolNotes = localStorage.getItem('schoolData')
+? JSON.parse(localStorage.getItem('schoolData')) : [];
+
+
+   const [saveNotes, setSavenotes]= useState(schoolNotes)
+
+ useEffect(() => {
+   localStorage.setItem("schoolData", JSON.stringify(saveNotes))
+ }, [saveNotes])
+
+
+
+
+//  -------------------------------to update the state of the note with the input text-------------
+
+ const [text, setText]= useState('')
+ const handleTextChange = (event) =>{
+ setText(event.target.value)
 }
 
-export default App;
+// -------------------------------------------to save note onclick-------------------------
+
+// ------------------ to save personal note-------------------------
+const handleSavePersonal = () => {
+   const newNote = {
+      id: nanoid(),
+      color: color,
+      text: text,
+      date: ddate.toLocaleString()
+  }
+   const newNotes = [...notes, newNote]
+
+  if(text.trim().length > 0){
+  setNotes(newNotes)
+  setText("")
+  }
+}
+// -----------------------------to save work notes---------------------------
+const handleSaveWork = () => {
+   const newNote = {
+      id: nanoid(),
+      color: color,
+      text: text,
+      date: ddate.toLocaleString()
+  }
+   const newWorkNotes = [...workNote, newNote]
+
+  if(text.trim().length > 0){
+  setWorknotes(newWorkNotes)
+  setText("")
+  }
+}
+// ---------------------------- to save school notes------------------------------
+const handleSaveSchool= () => {
+   const newNote = {
+      id: nanoid(),
+      color: color,
+      text: text,
+      date: ddate.toLocaleString()
+  }
+   const newSchoolNotes = [...saveNotes, newNote]
+
+  if(text.trim().length > 0){
+  setSavenotes(newSchoolNotes)
+  setText("")
+  }
+}
+// ----------------------to save gratitude notes---------------------------
+const handleSaveGratitude = () => {
+   const newNote = {
+      id: nanoid(),
+      color: color,
+      text: text,
+      date: ddate.toLocaleString()
+  }
+   const newGratitudeNotes = [...gratitudeNote, newNote]
+
+  if(text.trim().length > 0){
+  setGratitudenotes(newGratitudeNotes)
+  setText("")
+  }
+}
+  
+  
+  
+
+// -----------------------------------To delete a note-------------------------------------------
+const del = (id) => {
+ const remainingNotes = notes.filter((note) => note.id !== id)
+ setNotes(remainingNotes)
+}
+const delWork = (id) => {
+   const remainingNotes = workNote.filter((note) => note.id !== id)
+   setWorknotes(remainingNotes)
+  }
+  const delSchool = (id) => {
+   const remainingNotes = saveNotes.filter((note) => note.id !== id)
+   setSavenotes(remainingNotes)
+  }
+  const delGratitude = (id) => {
+   const remainingNotes = gratitudeNote.filter((note) => note.id !== id)
+   setGratitudenotes(remainingNotes)
+  }
+      
+
+
+
+ return(
+  <BrowserRouter>
+  <Routes>
+     <Route>
+     <Route path="/" element={<Landing/>}/>      
+     <Route path="/categories" element={<Categories/>}/> 
+     <Route path="/landing" element={<Landing/>}/>
+     </Route>
+
+     <Route> 
+     <Route path="personalnote" element={<PersonalNoteContainer notes={notes} delet={del}/>}/>
+     <Route path="personal" element={<Personal handleTextChanges={handleTextChange} datas={text} save={handleSavePersonal}/>}/>
+     <Route path="work" element={<Work notes={workNote} delet={delWork}/>}/>
+     <Route path="workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange}  datas={text} save={handleSaveWork}/>}/>
+     <Route path="school" element={<School notes={saveNotes} delet={delSchool}/>}/>
+     <Route path="schoolTasks" element={<Schooltasks handleTextChanges={handleTextChange} datas={text} save={handleSaveSchool}/>}/>
+     <Route path="gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude}/>}/>
+     <Route path="grateful" element={<Grateful handleTextChanges={handleTextChange} datas={text} save={handleSaveGratitude}/>}/>
+
+
+     </Route>
+  </Routes>
+</BrowserRouter>
+ )
+}
+
+
+
+ export default App;  
