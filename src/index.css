@@ -139,7 +139,7 @@ textarea[placeholder]{
     .col1, .col2{
     min-width: 260px;
     flex-basis: 100%;
-    margin: 0.8rem;
+    margin: 1rem;
     }
     .col2{
         display: flex;
@@ -262,7 +262,9 @@ textarea[placeholder]{
             height: 48vh;
             padding: 16px 32px;
     }
-
+     textarea[placeholder]{
+      font-size: 1rem;
+     }
         #deleteicon{
         font-size: 1.6rem;
     }
