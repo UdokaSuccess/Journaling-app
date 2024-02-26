@@ -1,9 +1,6 @@
 import React from 'react'
 import Note from './Notes';
 import {Link} from 'react-router-dom'
-import { CiEdit } from "react-icons/ci"
-// import { FaLongArrowAltLeft } from "react-icons/fa" <CiEdit  size='1.2rem'/> style={{display: 'flex', alignItems: 'center'}}
-
 
 function PersonalNoteContainer({notes, delet}) {
   const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet}/>)

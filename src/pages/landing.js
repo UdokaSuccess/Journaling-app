@@ -1,10 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import heroimg from './heroimg.jpg'
 import bookImg from './bookIcon4.png'
 import logo from './cover.png'
-// import {FaArrowRight} from 'react-icons/fa'
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 function Landing() {
   return (
@@ -15,7 +12,7 @@ function Landing() {
     <div className='col1'>
         <h1><span>D</span>ear <span>D</span>iary,</h1>
         <p>Manifest Your  dream life with guided journaling everyday</p>
-         <Link to='/categories'><button className='button1'>Start { HiArrowNarrowRight }</button></Link> 
+         <Link to='/categories'><button className='button1'>Start</button></Link> 
     </div>
     <div className='col2'>
      <img src={bookImg} width={680} alt='heroimg'/>

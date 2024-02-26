@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Note from './Notes';
-import { CiEdit } from "react-icons/ci";
 
 
 

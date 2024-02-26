@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import { MdSchool } from "react-icons/md";
 import { GiPrayer } from "react-icons/gi";
 import { BsPersonWorkspace } from "react-icons/bs";
-import { FaPen } from "react-icons/fa";
 const category = [
     {
         id : '1',
