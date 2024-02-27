@@ -5,7 +5,7 @@ import { MdDeleteForever } from "react-icons/md";
 function Note({id, text, colors, date, dele, title, add}) {
   return (
     <div className='note' style={{backgroundColor: colors}}>
-       <span style={{fontSize: '1.1rem', fontWeight:'bolder'}}>{title}</span>
+       <span style={{fontSize: '1.1rem', fontWeight:'bold'}}>{title}</span>
         <span>{text}</span>
         <span>{add}</span>
         <div className='note-footer'>

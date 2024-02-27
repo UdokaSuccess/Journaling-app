@@ -3,10 +3,34 @@ import { Link } from 'react-router-dom';
 import bookImg from './bookIcon4.png'
 import logo from './cover.png'
 
+
+
+const roots = document.querySelector(':root')
+const handleFontA = () =>  roots.style.setProperty('--font', 'cursive')
+const handleFontB = () =>  roots.style.setProperty('--font', 'Monospace')
+const handleFontC = () =>  roots.style.setProperty('--font', "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif")
+const handleFontD = () =>  roots.style.setProperty('--font',  '"Berkshire Swash", serif')
+const handleFontE = () =>  roots.style.setProperty('--font',  "Georgia, 'Times New Roman', Times, serif")
+
+
+
 function Landing() {
   return (
     <header>
-    <img src={logo} width={104} alt='Book_Diary_image'/>
+      <div className='navbar'>
+       <Link to='/'><img src={logo} width={104} alt='Book_Diary_image'/></Link>
+     <div class="dropdown">
+  <button class="dropbtn">Fonts</button>
+  <div class="dropdown-content">
+    <a href="#cursiveFont" onClick={handleFontA}>Cursive</a>
+    <a href="#monospaceFont" onClick={handleFontB}>Monospace</a>
+    <a href="#lucidaFont" onClick={handleFontC}>Lucida</a>
+    <a href="#serif" onClick={handleFontD}>Berkshire</a>
+    <a href="#georgiaFont" onClick={handleFontE}>Default</a>
+
+  </div>
+ </div>
+    </div><hr></hr>
     
     <div className='row'>
     <div className='col1'>
