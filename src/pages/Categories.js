@@ -40,7 +40,7 @@ const category = [
 
 const items =  category.map((item) => {
 return (
-    <div className='column'>
+    <div className='column' key={item.id}>
     <Link to={item.comp} key={item.id}><button className='selection'>{item.name}<br></br>{item.icon}</button></Link>
     </div>
 )

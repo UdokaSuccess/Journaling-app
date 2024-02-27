@@ -217,10 +217,11 @@ textarea[placeholder]{
     }
 
     .col1, .col2{
-    min-width: 260px;
+    min-width: 240px;
     flex-basis: 100%;
     text-align: center;
     margin: 0px;
+    border: 2px solid;
     }
     .col2{
         display: flex;
@@ -232,7 +233,7 @@ textarea[placeholder]{
         margin: 0 auto;
     }    
     .col2 img{
-        width:  240px;
+        width:  220px;
     }
     h1 span{
         font-size: 2.4rem; 
@@ -240,6 +241,7 @@ textarea[placeholder]{
 
     p{
         position: relative;
+        font-size: 1rem;
     }
  
     .column{
@@ -254,7 +256,7 @@ textarea[placeholder]{
     }
 
     .button1{
-         padding: 1.1rem 7.2rem;
+         padding: 1.1rem 7rem;
          margin-top: 1rem;
          font-size: 1.1rem;
     }
