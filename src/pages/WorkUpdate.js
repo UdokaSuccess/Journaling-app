@@ -6,7 +6,7 @@ function WorkUpdate({title, datas, add, handleTextChanges, handleTitleChanges, h
     <>
     <div className='frame'>
       <h1>Work Update</h1>
-      <textarea placeholder='Title' value={title} onChange={handleTitleChanges } className='textArea' rows={1}>
+      <textarea placeholder='Title' value={title} onChange={handleTitleChanges } className='textArea' rows={2}>
       </textarea>
       <textarea placeholder='Meeting Summary' value={datas} onChange={handleTextChanges } className='textArea'>
       </textarea>

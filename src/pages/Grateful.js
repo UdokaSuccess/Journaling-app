@@ -6,7 +6,7 @@ function Grateful({title, data, add, handleTitleChanges, handleAddChanges, handl
   <div className='frame'>
       <h1>Gratitude Notes</h1>
 
-      <textarea placeholder='Title' value={title} onChange={handleTitleChanges } className='textArea' rows={1}>
+      <textarea placeholder='Title' value={title} onChange={handleTitleChanges } className='textArea' rows={2}>
       </textarea>
       <textarea placeholder='What are you grateful for?' value={data} onChange={handleTextChanges} className='textArea'>
       </textarea>

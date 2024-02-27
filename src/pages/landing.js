@@ -19,9 +19,9 @@ function Landing() {
     <header>
       <div className='navbar'>
        <Link to='/'><img src={logo} width={104} alt='Book_Diary_image'/></Link>
-     <div class="dropdown">
-  <button class="dropbtn">Fonts</button>
-  <div class="dropdown-content">
+     <div className="dropdown">
+    <button className="dropbtn">Fonts</button>
+    <div className="dropdown-content">
     <a href="#cursiveFont" onClick={handleFontA}>Cursive</a>
     <a href="#monospaceFont" onClick={handleFontB}>Monospace</a>
     <a href="#lucidaFont" onClick={handleFontC}>Lucida</a>
