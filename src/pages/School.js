@@ -7,7 +7,7 @@ function School({notes, delet}) {
   const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet}/>)
 
   return (
-    <div>
+    <div className='notesContainer'>
         <h1>School Tasks</h1>
         <div className='wrapper'>
     <div className='noteList'>  

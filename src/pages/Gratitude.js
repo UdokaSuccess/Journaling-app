@@ -4,10 +4,10 @@ import Note from './Notes'
 
 
   function Gratitude({notes, delet}) {
-    const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet}/>)
+    const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} title={note.title} add={note.add}/>)
   
     return (
-      <div>
+      <div className='notesContainer'>
              <h1>Gratitude Entries</h1>
              <div className='wrapper'>
       <div className='noteList'>  
@@ -21,5 +21,6 @@ import Note from './Notes'
       </div>
     )
   }
+
   
 export default Gratitude;

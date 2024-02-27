@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
     <div className='frame'>
       <h1>Personal Thoughts</h1>
       {/* <input type='text' placeholder='Title' onChange={handleChangeTitle}/> */}
-      <textarea placeholder='Add a note here' value={datas} onChange={handleTextChanges } id='textArea'>
+      <textarea placeholder='Add a note here' value={datas} onChange={handleTextChanges } className='textarea'>
       </textarea>
       <div className='buttons'> 
       <Link to='/personalnote' onClick={save}><button className='button1'>Save</button></Link> 

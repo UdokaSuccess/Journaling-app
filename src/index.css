@@ -71,35 +71,42 @@ p{
 
 .frame{
     border: 2px inset ;
-    margin: 1.6rem auto;
+    margin: 1rem auto;
     width: 80%;
-    padding: 2.4rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    
+    padding: 1.3rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); 
 }
-textarea{
+
+.textarea{
 width: 50%;
+margin: 2px;
 height: 160px;
-padding: 12px 20px;
-box-sizing: border-box;
+padding: 16px 20px; 
 border: 2px solid #ccc;
-border-radius: 24px;
-background-color: #f8f8f8;
+border-radius: 12px;
 }
+.textArea{
+    width: 50%;
+    margin: 2px;
+    height: 32px;
+    padding: 16px 24px; 
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    }
+     
 textarea[placeholder]{
-    font-size: 1.1rem;
+    font-size: 16px;
 }
 
 .buttons{
     display: flex;
-    gap: 20px;
+    gap: 16px;
     margin: 0 auto;
     justify-content: center;
 }
 
 
 /* -----------------------------note comp------------------------- */
-
 .note{
     display: flex;
     flex-direction: column;
@@ -123,6 +130,7 @@ textarea[placeholder]{
     max-width: 1060px;
     margin: 1.6rem auto
 }
+
 
 
 
@@ -172,7 +180,7 @@ textarea[placeholder]{
     }
 
     .button1{
-         padding: 1.1rem 7.6rem;
+         padding: 1.1rem 7.2rem;
          margin-top: 1rem;
          font-size: 1.1rem;
     }
@@ -184,7 +192,7 @@ textarea[placeholder]{
         margin-top: 1.6rem;
     }
     .note{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .frame{
@@ -195,10 +203,26 @@ textarea[placeholder]{
         border-style: none;
     }
     
-    textarea{
+  .textarea{
+    width: 80%;
+    margin: 4px;
+    height: 124px;
+    padding: 16px 20px; 
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    }
+    .textArea{
         width: 80%;
-        padding: 12px 32px;
-}
+        margin: 2px;
+        height: 32px;
+        padding: 16px 24px; 
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        }
+         
+    textarea[placeholder]{
+        font-size: 15px;
+    }
 
 #deleteicon{
     font-size: 1.2rem;
@@ -235,7 +259,6 @@ textarea[placeholder]{
             font-size: 1.1rem;
         }     
 
-
         .column{
             flex-basis: 100%;
             display: flex;
@@ -248,7 +271,7 @@ textarea[placeholder]{
         }
     
         .button1{
-             padding: 1.1rem 9.6rem;
+             padding: 1.1rem 8.8rem;
              margin-top: 1rem;
              font-size: 1.1rem;
         }
@@ -264,19 +287,31 @@ textarea[placeholder]{
         
         .frame{
             margin: auto;
-            width: 95%;
-            padding: 16px;
+            width: 90%;
+            padding: 2px;
             box-shadow: none;
             border-style: none;
         }
-            textarea{
-            width: 95%;
-            height: 48vh;
-            padding: 16px 32px;
-    }
-     textarea[placeholder]{
-      font-size: 1rem;
-     }
+
+        .textarea{
+            width: 80%;
+            margin: 4px;
+            height: 124px;
+            padding: 16px 20px; 
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            }
+
+            .textArea{
+                width: 80%;
+                margin: 2px;
+                height: 48px;
+                padding: 16px 32px; 
+                }
+                 
+            textarea[placeholder]{
+                font-size: 16px;
+            }
         #deleteicon{
         font-size: 1.6rem;
     }
@@ -337,17 +372,32 @@ textarea[placeholder]{
 
     .frame{
         margin: auto;
-        width: 95%;
+        width: 90%;
         padding: 16px;
         box-shadow: none;
         border-style: none;
     }
     
-    textarea{
-        width: 95%;
-        height: 48vh;
-        padding: 16px 32px;
-}
+.textarea{
+    width: 80%;
+    margin: 4px;
+    height: 124px;
+    padding: 16px 20px; 
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    }
+    .textArea{
+        width: 80%;
+        margin: 2px;
+        height: 32px;
+        padding: 16px 24px; 
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        }
+         
+    textarea[placeholder]{
+        font-size: 16px;
+    }
 
 #deleteicon{
     font-size: 1.2rem;
@@ -421,17 +471,31 @@ textarea[placeholder]{
 
     .frame{
         margin: auto;
-        width: 95%;
+        width: 90%;
         padding: 16px;
         box-shadow: none;
         border-style: none;
     }
-    
-    textarea{
-        width: 95%;
-        height: 48vh;
-        padding: 16px 32px;
-}
+    .textarea{
+        width: 80%;
+        margin: 4px;
+        height: 162px;
+        padding: 16px 24px; 
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        }
+        .textArea{
+            width: 80%;
+            margin: 4px;
+            height: 40px;
+            padding: 32px 48px; 
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            }
+             
+        textarea[placeholder]{
+            font-size: 18px;
+        }
 
 #deleteicon{
     font-size: 1.8rem;

@@ -5,7 +5,7 @@ function Schooltasks({datas, handleTextChanges, save}) {
   return (
     <div className='frame'>
     <h1>School Tasks</h1>
-    <textarea placeholder='Add a note here' value={datas} onChange={handleTextChanges } id='textArea'>
+    <textarea placeholder='What did you learn today?' value={datas} onChange={handleTextChanges } className='textarea'>
     </textarea>
     <div className='buttons'> 
     <Link to='/school' onClick={save}><button className='button1'>Save</button></Link> 

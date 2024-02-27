@@ -5,10 +5,11 @@ import Note from './Notes';
 
 
 function Work({notes, delet}) {
-  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet}/>)
+  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} title={note.title} add={note.add}/>)
+  
 
   return (
-    <div>
+    <div className='notes-Container'>
            <h1>Work Updates</h1>
            <div className='wrapper'>
     <div className='noteList'>  

@@ -11,18 +11,17 @@ const category = [
         comp: '/gratitude' 
     },
     {
-        id : '2',
-        name: 'Work Updates',
-        icon: <BsPersonWorkspace/>,
-        comp: '/work'
-
-        
-    },
-    {
         id : '3',
         name: 'School Tasks',
         icon: <MdSchool/>,
         comp: '/school'
+
+        
+    }, {
+        id : '2',
+        name: 'Work Updates',
+        icon: <BsPersonWorkspace/>,
+        comp: '/work'
 
         
     },

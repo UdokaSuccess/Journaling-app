@@ -54,6 +54,7 @@ const workNotes = localStorage.getItem('workData')
 
    const [gratitudeNote, setGratitudenotes]= useState(gratitudeNotes)
    
+   
    // ------------------------to save gratitude notes to local storage-----
 
    useEffect(() => {
@@ -83,6 +84,15 @@ const schoolNotes = localStorage.getItem('schoolData')
  const handleTextChange = (event) =>{
  setText(event.target.value)
 }
+const [title, setTitle]= useState('')
+ const handleTitleChange = (event) =>{
+ setTitle(event.target.value)
+}
+
+const [add, setAdd]= useState('')
+ const handleAddChange = (event) =>{
+ setAdd(event.target.value)
+}
 
 // -------------------------------------------to save note onclick-------------------------
 
@@ -106,6 +116,8 @@ const handleSaveWork = () => {
    const newNote = {
       id: nanoid(),
       color: color,
+      title: title,
+      add: add,
       text: text,
       date: ddate.toLocaleString()
   }
@@ -136,6 +148,8 @@ const handleSaveGratitude = () => {
    const newNote = {
       id: nanoid(),
       color: color,
+      title: title,
+      add: add,
       text: text,
       date: ddate.toLocaleString()
   }
@@ -144,6 +158,8 @@ const handleSaveGratitude = () => {
   if(text.trim().length > 0){
   setGratitudenotes(newGratitudeNotes)
   setText("")
+  setTitle("")
+  setAdd("")
   }
 }
   
@@ -184,11 +200,11 @@ const delWork = (id) => {
      <Route path="personalnote" element={<PersonalNoteContainer notes={notes} delet={del}/>}/>
      <Route path="personal" element={<Personal handleTextChanges={handleTextChange} datas={text} save={handleSavePersonal}/>}/>
      <Route path="work" element={<Work notes={workNote} delet={delWork}/>}/>
-     <Route path="workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange}  datas={text} save={handleSaveWork}/>}/>
+     <Route path="workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} datas={text} title={title} add={add} save={handleSaveWork}/>}/>
      <Route path="school" element={<School notes={saveNotes} delet={delSchool}/>}/>
      <Route path="schoolTasks" element={<Schooltasks handleTextChanges={handleTextChange} datas={text} save={handleSaveSchool}/>}/>
      <Route path="gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude}/>}/>
-     <Route path="grateful" element={<Grateful handleTextChanges={handleTextChange} datas={text} save={handleSaveGratitude}/>}/>
+     <Route path="grateful" element={<Grateful handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} data={text} title={title} add={add} save={handleSaveGratitude}/>}/>
 
 
      </Route>
