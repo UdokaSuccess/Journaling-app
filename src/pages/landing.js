@@ -18,7 +18,7 @@ function Landing() {
   return (
     <header>
       <div className='navbar'>
-       <Link to='/landing'><img src={logo} width={104} alt='Book_Diary_image'/></Link>
+       <Link to='/landing'><img src={logo} width={104} alt='Book_Diary_image' className='logo'/></Link>
      <div className="dropdown">
     <button className="dropbtn">Fonts</button>
     <div className="dropdown-content">
