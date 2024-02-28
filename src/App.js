@@ -130,6 +130,8 @@ const handleSaveWork = () => {
   if(text.trim().length > 0){
   setWorknotes(newWorkNotes)
   setText("")
+  setTitle("")
+  setAdd("")
   }
 }
 // ---------------------------- to save school notes------------------------------
