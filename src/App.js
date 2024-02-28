@@ -235,15 +235,15 @@ const delWork = (id) => {
      <Route path="/categories" element={<Categories/>}/> 
      <Route path="/landing" element={<Landing/>}/>
      </Route>
-     <Route> 
-     <Route path="personalnote" element={<PersonalNoteContainer notes={notes} delet={del} click={editPersonalNote} />}/>
-     <Route path="personal" element={<Personal handleTextChanges={handleTextChange} datas={text} save={handleSavePersonal}/>}/>
-     <Route path="work" element={<Work notes={workNote} delet={delWork} click={editWorkNote}/>}/>
-     <Route path="workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} datas={text} title={title} add={add} save={handleSaveWork}/>}/>
-     <Route path="school" element={<School notes={saveNotes} delet={delSchool} click={editSchoolNote}/>}/>
-     <Route path="schoolTasks" element={<Schooltasks handleTextChanges={handleTextChange} datas={text} save={handleSaveSchool}/>}/>
-     <Route path="gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude} click={editGratitudeNote}/>}/>
-     <Route path="grateful" element={<Grateful handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} data={text} title={title} add={add} save={handleSaveGratitude}/>}/>
+     <Route>
+     <Route path="/personalnote" element={<PersonalNoteContainer notes={notes} delet={del} click={editPersonalNote} />}/>
+     <Route path="/personal" element={<Personal handleTextChanges={handleTextChange} datas={text} save={handleSavePersonal}/>}/>
+     <Route path="/work" element={<Work notes={workNote} delet={delWork} click={editWorkNote}/>}/>
+     <Route path="/workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} datas={text} title={title} add={add} save={handleSaveWork}/>}/>
+     <Route path="/school" element={<School notes={saveNotes} delet={delSchool} click={editSchoolNote}/>}/>
+     <Route path="/schoolTasks" element={<Schooltasks handleTextChanges={handleTextChange} datas={text} save={handleSaveSchool}/>}/>
+     <Route path="/gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude} click={editGratitudeNote}/>}/>
+     <Route path="/grateful" element={<Grateful handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} data={text} title={title} add={add} save={handleSaveGratitude}/>}/>
 
 
      </Route>
