@@ -3,7 +3,7 @@ import Note from './Notes';
 import {Link} from 'react-router-dom'
 
 function PersonalNoteContainer({notes, delet, click}) {
-  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} click={click}/>)
+  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} click={click} editing={note.editing}/>)
   return (
   <div className='notesContainer'>
         <h1>Personal Thoughts</h1>

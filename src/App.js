@@ -101,6 +101,7 @@ const handleSavePersonal = () => {
       id: Math.floor(Math.random() * 1000000),
       color: color,
       text: text,
+      editing: '/personal',
       date: ddate.toLocaleString()
   }
    const newNotes = [...notes, newNote]
@@ -121,6 +122,7 @@ const handleSaveWork = () => {
       title: title,
       add: add,
       text: text,
+      editing: '/workUpdate',
       date: ddate.toLocaleString()
   }
    const newWorkNotes = [...workNote, newNote]
@@ -136,6 +138,7 @@ const handleSaveSchool= () => {
       id: Math.floor(Math.random() * 1000000),
       color: color,
       text: text,
+      editing: '/schoolTasks',
       date: ddate.toLocaleString()
   }
    const newSchoolNotes = [...saveNotes, newNote]
@@ -153,6 +156,7 @@ const handleSaveGratitude = () => {
       title: title,
       add: add,
       text: text,
+      editing: '/grateful',
       date: ddate.toLocaleString()
   }
    const newGratitudeNotes = [...gratitudeNote, newNote]
