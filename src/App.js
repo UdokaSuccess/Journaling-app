@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import React, { useState, useEffect } from 'react'
-import {nanoid} from 'nanoid'
 import Personal from "./pages/Personal";
 import Work from "./pages/Work";
 import WorkUpdate from "./pages/WorkUpdate";
@@ -99,7 +98,7 @@ const [add, setAdd]= useState('')
 // ------------------ to save personal note-------------------------
 const handleSavePersonal = () => {
    const newNote = {
-      id: nanoid(),
+      id: Math.floor(Math.random() * 1000000),
       color: color,
       text: text,
       date: ddate.toLocaleString()
@@ -111,10 +110,13 @@ const handleSavePersonal = () => {
   setText("")
   }
 }
+
+ 
+
 // -----------------------------to save work notes---------------------------
 const handleSaveWork = () => {
    const newNote = {
-      id: nanoid(),
+      id: Math.floor(Math.random() * 1000000),
       color: color,
       title: title,
       add: add,
@@ -131,7 +133,7 @@ const handleSaveWork = () => {
 // ---------------------------- to save school notes------------------------------
 const handleSaveSchool= () => {
    const newNote = {
-      id: nanoid(),
+      id: Math.floor(Math.random() * 1000000),
       color: color,
       text: text,
       date: ddate.toLocaleString()
@@ -146,7 +148,7 @@ const handleSaveSchool= () => {
 // ----------------------to save gratitude notes---------------------------
 const handleSaveGratitude = () => {
    const newNote = {
-      id: nanoid(),
+      id: Math.floor(Math.random() * 1000000),
       color: color,
       title: title,
       add: add,
@@ -160,11 +162,47 @@ const handleSaveGratitude = () => {
   setText("")
   setTitle("")
   setAdd("")
+  console.log(newNote.id)
   }
 }
-  
-  
-  
+
+
+// ------------------------------------------------edit notes------------------------ -
+
+// ------------edit gratitude note ---------------
+ const editGratitudeNote = (id) =>{  
+    const selectNote  = gratitudeNote.find(note => note.id === id)
+   setText(selectNote.text)
+   setTitle(selectNote.title)
+   setAdd(selectNote.add)
+   delGratitude(selectNote.id) 
+} 
+
+// -------------------edit personal note--------------
+const editPersonalNote = (id) =>{  
+   const selectNote  = notes.find(note => note.id === id)
+   setText(selectNote.text)
+   setTitle(selectNote.title)
+   setAdd(selectNote.add)
+   del(selectNote.id)
+} 
+
+// -----------edit school note--------
+const editSchoolNote = (id) =>{  
+   const selectNote  = saveNotes.find(note => note.id === id)
+   setText(selectNote.text)
+   setTitle(selectNote.title)
+   setAdd(selectNote.add)
+   delSchool(selectNote.id)
+} 
+// -----------edit work note--------
+const editWorkNote = (id) =>{  
+   const selectNote  = workNote.find(note => note.id === id)
+   setText(selectNote.text)
+   setTitle(selectNote.title)
+   setAdd(selectNote.add)
+   delWork(selectNote.id)
+} 
 
 // -----------------------------------To delete a note-------------------------------------------
 const del = (id) => {
@@ -185,8 +223,6 @@ const delWork = (id) => {
   }
       
 
-
-
  return(
   <BrowserRouter>
   <Routes>
@@ -195,15 +231,14 @@ const delWork = (id) => {
      <Route path="/categories" element={<Categories/>}/> 
      <Route path="/landing" element={<Landing/>}/>
      </Route>
-
      <Route> 
-     <Route path="personalnote" element={<PersonalNoteContainer notes={notes} delet={del}/>}/>
+     <Route path="personalnote" element={<PersonalNoteContainer notes={notes} delet={del} click={editPersonalNote} />}/>
      <Route path="personal" element={<Personal handleTextChanges={handleTextChange} datas={text} save={handleSavePersonal}/>}/>
-     <Route path="work" element={<Work notes={workNote} delet={delWork}/>}/>
+     <Route path="work" element={<Work notes={workNote} delet={delWork} click={editWorkNote}/>}/>
      <Route path="workUpdate" element={<WorkUpdate handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} datas={text} title={title} add={add} save={handleSaveWork}/>}/>
-     <Route path="school" element={<School notes={saveNotes} delet={delSchool}/>}/>
+     <Route path="school" element={<School notes={saveNotes} delet={delSchool} click={editSchoolNote}/>}/>
      <Route path="schoolTasks" element={<Schooltasks handleTextChanges={handleTextChange} datas={text} save={handleSaveSchool}/>}/>
-     <Route path="gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude}/>}/>
+     <Route path="gratitude" element={<Gratitude notes={gratitudeNote} delet={delGratitude} click={editGratitudeNote}/>}/>
      <Route path="grateful" element={<Grateful handleTextChanges={handleTextChange} handleTitleChanges={handleTitleChange} handleAddChanges={handleAddChange} data={text} title={title} add={add} save={handleSaveGratitude}/>}/>
 
 

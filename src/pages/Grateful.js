@@ -15,7 +15,7 @@ function Grateful({title, data, add, handleTitleChanges, handleAddChanges, handl
 
       <div className='buttons'> 
       <Link to='/gratitude' onClick={save}><button className='button1'>Save</button></Link> 
-      <Link to='/categories'><button className='button1'>Back</button></Link> 
+      <Link to='/gratitude'><button className='button1'>Back</button></Link> 
       </div>
       </div>
   )

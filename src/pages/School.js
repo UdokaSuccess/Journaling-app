@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import Note from './Notes';
 
 
-function School({notes, delet}) {
-  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet}/>)
+function School({notes, delet, click}) {
+  const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} click={click}/>)
 
   return (
     <div className='notesContainer'>

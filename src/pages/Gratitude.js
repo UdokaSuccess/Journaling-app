@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 import Note from './Notes'
 
 
-  function Gratitude({notes, delet}) {
-    const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} title={note.title} add={note.add}/>)
+  function Gratitude({notes, delet, click}) {
+    const datas = notes.map((note) => <Note key={note.id} id={note.id} text={note.text} colors={note.color} date={note.date} dele={delet} title={note.title} add={note.add} click={click}/>)
   
     return (
       <div className='notesContainer'>

@@ -9,7 +9,7 @@ function Schooltasks({datas, handleTextChanges, save}) {
     </textarea>
     <div className='buttons'> 
     <Link to='/school' onClick={save}><button className='button1'>Save</button></Link> 
-    <Link to='/categories'><button className='button1'>Back</button></Link> 
+    <Link to='/school'><button className='button1'>Back</button></Link> 
     </div>
     </div>
   )

@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
       </textarea>
       <div className='buttons'> 
       <Link to='/personalnote' onClick={save}><button className='button1'>Save</button></Link> 
-      <Link to='/categories'><button className='button1'>Back</button></Link> 
+      <Link to='/personalnote'><button className='button1'>Back</button></Link> 
       </div>
       </div>
     </>

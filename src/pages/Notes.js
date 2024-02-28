@@ -1,11 +1,15 @@
 import React from 'react'
 import { MdDeleteForever } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-
-function Note({id, text, colors, date, dele, title, add}) {
+function Note({id, text, colors, date, dele, title, add, click}) {
   return (
     <div className='note' style={{backgroundColor: colors}}>
-       <span style={{fontSize: '1.1rem', fontWeight:'bold'}}>{title}</span>
+      <div className='note-footer'>
+      <span style={{fontSize: '1.1rem', fontWeight:'bold'}}>{title}</span>
+       <Link to='/personal' onClick={() => click(id)}><FaEdit size='1.2rem'/></Link>
+      </div>
         <span>{text}</span>
         <span>{add}</span>
         <div className='note-footer'>
