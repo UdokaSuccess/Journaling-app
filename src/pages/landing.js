@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import bookImg from './bookIcon4.png'
-import logo from './cover.png'
-
+import { FaBookOpenReader } from "react-icons/fa6";
 
 
 const roots = document.querySelector(':root')
@@ -21,7 +19,6 @@ function Landing() {
   return (
     <header>
       <div className='navbar'>
-       <Link to='/landing'><img src={logo} width={104} alt='Book_Diary_image' className='logo'/></Link>
      <div className="dropdown">
     <button className="dropbtn">Fonts</button>
     <div className="dropdown-content">
@@ -31,20 +28,16 @@ function Landing() {
     <a href="#serif" onClick={handleFontD}>Berkshire</a>
     <a href="#Aclonica" onClick={handleFontE}>Aclonica</a>
     <a href="#georgiaFont" onClick={handleFontF}>Default</a>
-
-
   </div>
  </div>
     </div><hr></hr>
     
     <div className='row'>
     <div className='col1'>
+        <FaBookOpenReader size={160} id='icon'/>
         <h1><span>D</span>ear <span>D</span>iary,</h1>
         <p>Manifest Your  dream life with guided journaling everyday</p>
          <Link to='/categories'><button className='button1'>Start</button></Link> 
-    </div>
-    <div className='col2'>
-     <img src={bookImg} width={680} alt='heroimg'/>
     </div>
     </div>
     </header>

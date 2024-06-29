@@ -14,7 +14,7 @@ import PersonalNoteContainer from "./pages/Personal2";
 
 function App() {
    const ddate = new Date()
-   const colors = ["#F3DBCF", "#E5CICD", "#C9BBC8", "#B6B4C2", "#AAC9CE" ]
+   const colors = ["#F3DBCF", "#E5CICD", "#C9BBC8", "#B6B4C2", "#AAC9CE", "#E2CFF4", "#DAB1F0", "#B6C7EF", "#bc85a3", "#C56C86" ]
    const colorsRandom = Math.floor(Math.random() * colors.length)
    const color =  colors[colorsRandom]
 

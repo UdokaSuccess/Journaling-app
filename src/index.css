@@ -5,33 +5,32 @@
 
 
 :root{
-    --primary: #355C7D;
-    --secondary: hsl(354, 100%, 73%);
-    --tertiary: #C56C86;
+    --primary: #bc85a3;
+    --secondary: #614673;
+    /* --tertiary: #C56C86; */
+    --tertiary: #E2CFF4;
     --font:  Georgia, 'Times New Roman', Times, serif;
 }
 
 /* --------------------------Landing Page component------------------------ */
-
 body{
-    background-color: aliceblue;
+    background-color:  #f3f3ff;
 }
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
-    padding-bottom: 6px;
-
+    padding-bottom: 2px;
 }
 
 /* ------------------------------Style The Dropdown Button------------------ */
 .dropbtn {
-    background-color: var(--primary);
-    color: #fff;
-    padding: 6px 32px;
+    background-color: var(--secondary);
+    color: #f1f1f1;
+    padding: 8px 32px;
     font-size: 16px;
-    /* border: 1px solid var(--primary); */
+    margin: 8px 2rem;
     cursor: pointer;
   }
   
@@ -46,7 +45,7 @@ body{
     display: none;
     position: fixed;
     background-color: #f9f9f9;
-    min-width: 130px;
+    min-width: 170px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -69,51 +68,44 @@ body{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-background-color: var(--primary);
-color: #fff;
+     color: #fff;
+     opacity: 0.8;
   }
-  hr{
-    margin-top: 0;
-    display: none;
-  }
-/* -------------------------------End of dropdown btn---------------------------------- */
+  
+/* -------------------------------hero section---------------------------------- */
 .row{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 90vh;
-    justify-content: center;
-    overflow-y: hidden;
+    text-align: center;
 }
 
-.col1, .col2{
-margin: 4px;
-flex-basis: 40%;
-}
 .col1{
-    margin-left: 48px;
+    padding: 1.6rem;
+    z-index: 1;
+}
+#icon{
+    color: #aba2c4;
+    color: var(--secondary);
 }
 h1{
     font-family: var(--font);
 }
-
-
+.hero-img{
+border: 2px solid #ccc;
+width: 320px;
+}
 h1 span{
     font-size: 2.6rem;
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .button1{
-    background-color: var(--primary);
+     background-color: var(--secondary);
      padding: 1.1rem 14rem;
-     margin-top: 2.4rem;
+     margin-top: 2.6rem;
      color: #fff; 
      font-size: 1.1rem;
      font-family: var(--font);
 }
 p{
-    position: absolute;
-    top: 50%;
     font-family: var(--font);
     font-size: 1.2rem
 }
@@ -124,10 +116,6 @@ p{
     align-items: center;
     flex-flow: row wrap;
     justify-content: center;
-    height: 90vh;
-}
-.logo{
-    width: ;
 }
 .column{
     flex-basis: 40%;
@@ -142,7 +130,7 @@ p{
     margin: 1.2rem;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: #B6B4C2; 
+    background-color: var(--tertiary);
     border: none;
     font-family: var(--font);
 }
@@ -175,16 +163,13 @@ border-radius: 12px;
 textarea[placeholder]{
     font-family: var(--font);
     font-size: 1.1rem;
-
 }
-
 .buttons{
     display: flex;
     gap: 16px;
     margin: 0 auto;
     justify-content: center;
 }
-
 
 /* -----------------------------note comp------------------------- */
 .note{
@@ -196,7 +181,6 @@ textarea[placeholder]{
     padding: 16px 16px 0 16px;
     font-size: 1.1rem;
 }
-
 .note-footer{
     display: flex;
     justify-content: space-between;
@@ -206,7 +190,6 @@ textarea[placeholder]{
      gap: 12px;
      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     font-family: var(--font);
-
 }
 .wrapper{
     max-width: 1060px;
@@ -214,75 +197,43 @@ textarea[placeholder]{
 }
 
 
-
-
-/* --------------------------media queries----------------------- */
+/* ---------------------------------------------media queries----------------------- */
 
 /* ------------------------------small mobiles/iphones------------------------- */
 @media screen and (max-width: 320px) {
-    .row{
-        flex-flow: row wrap-reverse; 
-        height: 80vh;       
-    }
-    hr{
-        display: block;
-    }
     .navbar{
         padding-bottom: 0px;    
     }
-    .logo{
-    width: 80px;
-    }
-    .dropbtn {
+     .dropbtn {
         padding: 6px 32px;
         font-size: 13px;
         margin: 2px;
       }
-    .col1, .col2{
-    min-width: 240px;
-    flex-basis: 100%;
-    text-align: center;
-    margin: 0px;
-    gap: 0px;
-    }
-    .col2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.3rem;
-    }
     .col1{
         margin: 0 auto;
     }    
-    .col2 img{
-        width:  200px;
-    }
     h1 span{
         font-size: 2.2rem; 
     }
-
     p{
-        position: relative;
-        font-size: 1rem;
+       position: relative;
+       letter-spacing: 2px;
+       font-size: 1rem;
     }
- 
-    .column{
+     .column{
         flex-basis: 100%;
         display: flex;
     }
-
     .selection{
         font-size: 1.1rem;
         margin: 1.2rem;
         min-width: 300px
     }
-
     .button1{
          padding: 1rem 7rem;
          margin-top: 1rem;
          font-size: 1.1rem;
     }
-
     .buttons{
         flex-flow: row wrap;
         gap: 8px;
@@ -292,15 +243,13 @@ textarea[placeholder]{
     .note{
         font-size: 1.2rem;
     }
-
     .frame{
         margin: auto;
         width: 90%;
         padding: 9px;
         box-shadow: none;
         border-style: none;
-    }
-    
+    }    
   .textarea{
     width: 80%;
     margin: 4px;
@@ -309,85 +258,59 @@ textarea[placeholder]{
     border: 2px solid #ccc;
     border-radius: 12px;
     }
-    .textArea{
+   .textArea{
         width: 80%;
         margin: 2px;
         height: 32px;
         padding: 16px 24px; 
         border: 2px solid #ccc;
         border-radius: 12px;
-        }
-         
-    textarea[placeholder]{
+        }         
+   textarea[placeholder]{
         font-size: 15px;
     }
-
-#deleteicon{
+  #deleteicon{
     font-size: 1.2rem;
 }
 }
 
-/* -------------------normal mobiles----------------- */
-@media screen and (max-width: 428px) and (min-width: 321px){
-        .row{
-            flex-flow: row wrap-reverse;
-        }
-        .navbar{
-            padding-bottom: 0;
-        
-        }     .logo{
-            width: 100px;
-            }
-            .dropbtn {
+/* ------------------------------------normal mobiles------------------------- */
+@media screen and (max-width: 384px) and (min-width: 321px){
+        .dropbtn {
                 padding: 8px 32px;
                 font-size: 16px;
                 margin: 2px;
               }
-              hr{
-                display: block;
-            }
-
-        .col1, .col2{
-        min-width: 280px;
-        flex-basis: 100%;
-        margin: 0px;
-        gap: 0px;
-        text-align: center;
+        .col1{
+            margin-top: 30%;
+            padding: 0;
         }
-        .col2{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1.2rem;
-        }
-    
-        .col2 img{
-           min-width:  240px;  
-           max-width: 424px;
-        }   
-
+        #icon{
+            margin: 16px 0;
+        }  
         p{
-            position: relative;
+            margin: 16px 0;
             font-size: 1.1rem;
+            letter-spacing: 1.3px;
         }     
-
         .column{
             flex-basis: 100%;
             display: flex;
-        }
-    
+        }    
         .selection{
             font-size: 1.2rem;
             margin: 1.2rem;
             min-width: 328px
         }
-    
         .button1{
-             padding: 1.1rem 8.8rem;
+             padding: 1.1rem 9.4rem;
              margin-top: 1rem;
              font-size: 1.1rem;
-        }
-    
+        } 
+        .button1:hover{
+            opacity: 0.8;
+            
+        }   
         .buttons{
             flex-flow: row wrap;
             gap: 8px;
@@ -395,8 +318,7 @@ textarea[placeholder]{
         }
         .note{
             font-size: 1.2rem;
-        }
-        
+        }        
         .frame{
             margin: auto;
             width: 90%;
@@ -404,7 +326,6 @@ textarea[placeholder]{
             box-shadow: none;
             border-style: none;
         }
-
         .textarea{
             width: 80%;
             margin: 4px;
@@ -412,14 +333,12 @@ textarea[placeholder]{
             border: 2px solid #ccc;
             border-radius: 12px;
             }
-
             .textArea{
                 width: 80%;
                 margin: 2px;
                 height: 48px;
                 padding: 16px 32px; 
-                }
-                 
+                }                 
             textarea[placeholder]{
                 font-size: 16px;
             }
@@ -427,6 +346,77 @@ textarea[placeholder]{
         font-size: 1.6rem;
     }
     }
+    /* -------------------------------------for next size */ /* -------------------normal mobiles----------------- */
+@media screen and (min-width: 386px) and (max-width: 428px){
+     .dropbtn {
+            padding: 8px 32px;
+            font-size: 16px;
+            margin: 2px;
+          }
+          hr{
+            display: block;
+        }
+      .col1{
+        margin-top: 24%;
+        padding: 0;
+    }
+      #icon{
+        margin: 16px 0;
+    }  
+      p{
+        margin: 16px 0;
+        font-size: 1.1rem;
+        letter-spacing: 1.3px;
+    }     
+      .column{
+        flex-basis: 100%;
+    }
+     .selection{
+        font-size: 1.2rem;
+        margin: 1.2rem;
+        min-width: 380px
+    }
+      .button1{
+         padding: 1.1rem 9.8rem;
+         margin-top: 1rem;
+         font-size: 1.1rem;
+    }
+    .buttons{
+        flex-flow: row wrap;
+        gap: 8px;
+        margin-top: 1.6rem 0 0 0;
+    }
+    .note{
+        font-size: 1.2rem;
+    }
+    .frame{
+        margin: auto;
+        width: 90%;
+        padding: 2px;
+        box-shadow: none;
+        border-style: none;
+    }
+    .textarea{
+        width: 80%;
+        margin: 4px;
+        padding: 16px 20px; 
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        }
+    .textArea{
+            width: 80%;
+            margin: 2px;
+            height: 48px;
+            padding: 16px 32px; 
+            }
+    textarea[placeholder]{
+            font-size: 16px;
+        }
+    #deleteicon{
+    font-size: 1.6rem;
+}
+}
+
 
 /* ------------------------ bigger mobiles----------------- */
 @media  screen and (max-width: 767px) and (min-width: 429px){
@@ -524,20 +514,17 @@ textarea[placeholder]{
     hr{
         display: block;
     }
-
     .col1, .col2{
     min-width: 720px;
     flex-basis: 100%;
     margin: 1.2rem;
     text-align: center;
     }
-
     .col2{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .col2 img{
         width:  720px;
         border-radius: 50%;    
@@ -545,7 +532,6 @@ textarea[placeholder]{
     .col1{        
     font-size: 1.4rem;
     }
-
     p{
         position: relative;
         font-size: 1.3rem;
@@ -557,34 +543,28 @@ textarea[placeholder]{
         flex-basis: 40%;
         display: flex;
     }
-
     .selection{
         font-size: 1.6rem;
         margin: 1.2rem;
         min-width: 328px
     }
-
     .button1{
          padding: 1.1rem 21rem;
          margin-top: 1.6rem;
          font-size: 1.2rem;
     }
-
     .buttons{
         flex-flow: row wrap;
         gap: 8px;
         margin: 0;
         margin-top: 1.6rem;
     }
-
     .note{
         font-size: 1.4rem;
     }
-
     .note-footer{
         padding-top: 16px;
     }
-
     .frame{
         margin: auto;
         width: 90%;
@@ -607,14 +587,11 @@ textarea[placeholder]{
             padding: 32px 48px; 
             border: 2px solid #ccc;
             border-radius: 12px;
-            }
-             
+            }             
         textarea[placeholder]{
             font-size: 18px;
         }
-
 #deleteicon{
     font-size: 1.8rem;
 }
-
 }

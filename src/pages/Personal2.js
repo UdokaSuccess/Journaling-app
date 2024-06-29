@@ -14,7 +14,7 @@ function PersonalNoteContainer({notes, delet, click}) {
     </div>
       <div className='buttons'>
                 <Link to='/personal'><button className='button1'>Add </button></Link>   
-                <Link to='/categories'><button className='button1'>back</button></Link> 
+                <Link to='/categories'><button className='button1'>Back</button></Link> 
       </div>
     </div>
   )
