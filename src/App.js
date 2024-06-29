@@ -111,10 +111,8 @@ const handleSavePersonal = () => {
   setText("")
   }
 }
-
  
-
-// -----------------------------to save work notes---------------------------
+//-----------------------------to save work notes---------------------------
 const handleSaveWork = () => {
    const newNote = {
       id: Math.floor(Math.random() * 1000000),
