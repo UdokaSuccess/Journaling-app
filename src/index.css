@@ -5,9 +5,7 @@
 
 
 :root{
-    --primary: #bc85a3;
     --secondary: #614673;
-    /* --tertiary: #C56C86; */
     --tertiary: #E2CFF4;
     --font:  Georgia, 'Times New Roman', Times, serif;
 }

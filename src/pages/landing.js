@@ -12,9 +12,6 @@ const handleFontE = () =>  roots.style.setProperty('--font',  "Aclonica, sans-se
 const handleFontF = () =>  roots.style.setProperty('--font',  "Georgia, 'Times New Roman', Times, serif")
 
 
-
-
-
 function Landing() {
   return (
     <header>
