@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { FaBookOpenReader } from "react-icons/fa6";
 
-
 const roots = document.querySelector(':root')
 const handleFontA = () =>  roots.style.setProperty('--font', 'Amita, cursive')
 const handleFontB = () =>  roots.style.setProperty('--font', '"Kode Mono", monospace')
