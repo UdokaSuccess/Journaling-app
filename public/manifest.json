@@ -2,7 +2,7 @@
     "name": "My Diary",
     "short_name": "Diary",
     "description": "A Personal Journaling app",
-    "start_url": "/",
+    "start_url": "/?utm_source=pwa",
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "display": "standalone",
