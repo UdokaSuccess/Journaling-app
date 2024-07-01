@@ -6,8 +6,8 @@
 /* --------------------------Landing Page component------------------------ */
 body{
     background-color:  #f3f3ff;
-    font-display: s;
-}
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   }
 .navbar{
     display: flex;
     justify-content: right;
