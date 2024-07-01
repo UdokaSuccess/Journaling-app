@@ -4,6 +4,12 @@ import './index.css'
 import App from './App';
 
 
+if('serviceWorker' in navigator){
+      window.addEventListener('load', () =>{
+        navigator.serviceWorker.register('/build/sw.js')
+      })
+    }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
    root.render(
       <div>
